@@ -8,6 +8,7 @@ user_socket.on('output-ID', output => {
 });
 
 function showNewChatForm() {
+    document.getElementById("linkToCopy").innerHTML = 'xxx-xxxx-xxxx-xxx';
     document.getElementById('newchat-popup').style.display = 'block';
     document.getElementById("yourNameInput1").focus();
 
