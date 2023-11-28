@@ -1,4 +1,4 @@
-window.user_socket = io('http://localhost:8000');
+window.user_socket = io('https://web-chat-hqk4.onrender.com');
 
 const user_name = 'Rohit';
 user_socket.emit('new-user-joined', user_name);
