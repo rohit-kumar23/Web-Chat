@@ -14,7 +14,7 @@ function showSnackbar(msg) {
 }
 
 function createNewChat(userName, chatName, chatID) {
-    var socket = io('http://localhost:8000');
+    var socket = io('https://web-chat-hqk4.onrender.com');
     socket.emit('chat-created', userName, chatName, chatID);
 
     socket.on('receive', (msg_tmp, chatID_tmp, userName_tmp, sender_tmp) => {
@@ -83,7 +83,7 @@ function confirmNewChat() {
 user_socket.on('query-response', (output, userName, chatName, chatID) => {
     if (output === 'true') {
 
-        var socket = io('http://localhost:8000');
+        var socket = io('https://web-chat-hqk4.onrender.com');
         socket.emit('chat-joined', userName, chatID);
 
         socket.on('receive', (msg_tmp, chatID_tmp, userName_tmp, sender_tmp) => {
